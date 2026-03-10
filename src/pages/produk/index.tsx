@@ -2,14 +2,13 @@ import { useRouter } from "next/router";
 import {useEffect, useState} from "react";
 
 type ProducType = {
-    id: number;
+    id: string;
     nama: string;
-    harga: number;
-    ukuran: string;
-    warna: string;
+    price: number;
+    size: string;
 }
 
-const kategori = () => {
+const Produk = () => {
     // const [isLogin, setIsLogin] = useState(false);
     // const [isLoading, setIsLoading] = useState(true);
     // const router = useRouter();
@@ -33,9 +32,8 @@ const kategori = () => {
             {products.map((product: ProducType) => (
                 <div key={product.id}>
                     <h2>{product.nama}</h2>
-                    <p>Harga: {product.harga}</p>
-                    <p>Ukuran: {product.ukuran}</p>
-                    <p>Warna: {product.warna}</p>
+                    <p>Harga: {product.price}</p>
+                    <p>Ukuran: {product.size}</p>
                 </div>
             ))}
                 </div>
@@ -43,4 +41,4 @@ const kategori = () => {
       
 };
 
-export default kategori;
+export default Produk;
